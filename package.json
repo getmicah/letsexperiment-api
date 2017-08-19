@@ -2,7 +2,7 @@
   "name": "myapp-api",
   "version": "0.1.0",
   "description": "backend",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:getmicah/myapp-api.git",
   "author": "Micah Cowell <micahcowell@gmail.com>",
   "license": "MIT",
