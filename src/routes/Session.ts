@@ -18,9 +18,9 @@ export default class SessionRouter {
 
 	private middleware() {
 		this.router.use((req: Request, res: Response, next: NextFunction) => {
-			res.header("Access-Control-Allow-Origin", "*");
+			res.header('Access-Control-Allow-Origin', '*');
 			res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
-			res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+			res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 			next();		  
 		});
 	}
