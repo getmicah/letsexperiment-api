@@ -8,7 +8,7 @@ class Store {
 
 	public init(): Promise<MongoError> {
 		return new Promise((resolve, reject) => {
-			MongoClient.connect(config.database.getUrl())
+			MongoClient.connect(process.env.MONGODB_URI)
 				.then((db) => {
 					this.db = db;
 					this.secret = config.auth.secret;

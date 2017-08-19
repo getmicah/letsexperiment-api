@@ -25,4 +25,4 @@ class Server {
         this.app.use(`/v${config_1.default.server.version}`, this.router);
     }
 }
-exports.default = new Server().app.listen(config_1.default.server.port);
+exports.default = new Server().app.listen(process.env.PORT || config_1.default.server.port);

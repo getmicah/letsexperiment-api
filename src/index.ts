@@ -32,4 +32,4 @@ class Server {
 	}
 }
 
-export default new Server().app.listen(config.server.port);
+export default new Server().app.listen(process.env.PORT || config.server.port);
