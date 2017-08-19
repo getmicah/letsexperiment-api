@@ -6,16 +6,7 @@ class SessionRouter {
     constructor() {
         this.router = express_1.Router();
         this.controller = new Session_1.default();
-        this.middleware();
         this.routes();
-    }
-    middleware() {
-        this.router.use((req, res, next) => {
-            res.header('Access-Control-Allow-Origin', '*');
-            res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
-            res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-            next();
-        });
     }
     respond(res, r) {
         res.status(r.status).json(r);
