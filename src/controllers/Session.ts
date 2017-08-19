@@ -53,14 +53,14 @@ export default class SessionContoller {
 				if (dbError) {
 					reject(new HttpResponse(500, 'Database', dbError));
 				}
-				resolve(new HttpResponse(200, 'Success', dbRes));
+				resolve(new HttpResponse(200, 'Success', session.props));
 			});
 		});
 	}
 
 	public addSession(props: any): Promise<HttpResponse> {
 		return new Promise((resolve, reject) => {
-			const required = ['partnerOneNickname', 'partnerTwoNickname'];
+			const required = ['partnerOneNickname', 'partnerTwoNickname', 'partnerOneQuestions', 'partnerTwoQuestions', 'partnerOneIsDone', 'partnerTwoIsDone'];
 			const session = new Session(props, required);
 			session.validate()
 				.then(session.hasRequiredProperties.bind(session))

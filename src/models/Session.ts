@@ -9,11 +9,17 @@ const sessionSchema: JsonSchema = {
 		partnerTwoNickname: {
 			type: 'string'
 		},
-		partnerOneAnswers: {
+		partnerOneQuestions: {
 			type: 'array'
 		},
-		partnerTwoAnswers: {
+		partnerTwoQuestions: {
 			type: 'array'
+		},
+		partnerOneIsDone: {
+			type: 'boolean'
+		},
+		partnerTwoIsDone: {
+			type: 'boolean'
 		},
 		created_at: {
 			type: 'string'
