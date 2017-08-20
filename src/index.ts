@@ -31,16 +31,9 @@ class Server {
 			res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 			next();		  
 		});
-		/*
 		this.app.use(function(req: Request, res: Response, next: NextFunction) {
-			if (req.ip == '68.113.9.96' || req.ip == '151.101.61.147') {
-				next();				
-			}
-			else {
-				res.status(403).end('forbidden');				
-			}
+			console.log(req.ip)
 		});
-		*/
 		this.app.use(helmet());
 	}
 
