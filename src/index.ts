@@ -3,7 +3,6 @@ import { Router, Request, Response, NextFunction } from 'express';
 import * as bodyParser from 'body-parser';
 
 import store from './store';
-import config from './config';
 
 import SessionRouter from './routes/Session';
 
@@ -35,8 +34,8 @@ class Server {
 
 	private routes(): void {
 		this.router.use('/', new SessionRouter().router);
-		this.app.use(`/v${config.server.version}`, this.router);
+		this.app.use(`/v1`, this.router);
 	}
 }
 
-export default new Server().app.listen(process.env.PORT || config.server.port);
+export default new Server().app.listen(process.env.PORT);

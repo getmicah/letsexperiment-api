@@ -3,7 +3,6 @@ const ts = require('gulp-typescript');
 const nodemon = require('nodemon');
 const exec = require('child_process').exec;
 
-const config = require('./dist/config.js').default;
 const tsProject = ts.createProject('tsconfig.json');
 
 gulp.task('scripts', () => {
