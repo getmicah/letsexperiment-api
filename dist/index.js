@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
+const helmet = require("helmet");
 const store_1 = require("./store");
 const Session_1 = require("./routes/Session");
 class Server {
@@ -24,6 +25,15 @@ class Server {
             res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
             next();
         });
+        this.app.use(function (req, res, next) {
+            if (req.ip == '68.113.9.96' || req.ip == '151.101.61.147') {
+                next();
+            }
+            else {
+                res.status(403).end('forbidden');
+            }
+        });
+        this.app.use(helmet());
     }
     routes() {
         this.router.use('/', new Session_1.default().router);
