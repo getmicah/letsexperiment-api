@@ -21,6 +21,12 @@ const sessionSchema: JsonSchema = {
 		partnerTwoIsDone: {
 			type: 'boolean'
 		},
+		partnerOneCurrentGroup: {
+			type: 'number'
+		},
+		partnerTwoCurrentGroup: {
+			type: 'number'
+		},
 		created_at: {
 			type: 'string'
 		}

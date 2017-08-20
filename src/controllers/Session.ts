@@ -46,7 +46,7 @@ export default class SessionContoller {
 				.catch((r) => reject(r));
 		});
 	}
-	
+
 	private insertSession(session: Session): Promise<HttpResponse> {
 		return new Promise((resolve, reject) => {
 			this.collection.insertOne(session.props, (dbError, dbRes) => {
@@ -60,7 +60,16 @@ export default class SessionContoller {
 
 	public addSession(props: any): Promise<HttpResponse> {
 		return new Promise((resolve, reject) => {
-			const required = ['partnerOneNickname', 'partnerTwoNickname', 'partnerOneQuestions', 'partnerTwoQuestions', 'partnerOneIsDone', 'partnerTwoIsDone'];
+			const required = [
+				'partnerOneNickname',
+				'partnerTwoNickname',
+				'partnerOneQuestions',
+				'partnerTwoQuestions',
+				'partnerOneIsDone',
+				'partnerTwoIsDone',
+				'partnerOneCurrentGroup',
+				'partnerTwoCurrentGroup'
+			];
 			const session = new Session(props, required);
 			session.validate()
 				.then(session.hasRequiredProperties.bind(session))

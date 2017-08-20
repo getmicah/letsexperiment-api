@@ -53,7 +53,16 @@ class SessionContoller {
     }
     addSession(props) {
         return new Promise((resolve, reject) => {
-            const required = ['partnerOneNickname', 'partnerTwoNickname', 'partnerOneQuestions', 'partnerTwoQuestions', 'partnerOneIsDone', 'partnerTwoIsDone'];
+            const required = [
+                'partnerOneNickname',
+                'partnerTwoNickname',
+                'partnerOneQuestions',
+                'partnerTwoQuestions',
+                'partnerOneIsDone',
+                'partnerTwoIsDone',
+                'partnerOneCurrentGroup',
+                'partnerTwoCurrentGroup'
+            ];
             const session = new Session_1.default(props, required);
             session.validate()
                 .then(session.hasRequiredProperties.bind(session))
