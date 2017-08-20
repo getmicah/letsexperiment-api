@@ -31,9 +31,6 @@ class Server {
 			res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 			next();		  
 		});
-		this.app.use(function(req: Request, res: Response, next: NextFunction) {
-			console.log(req.ip)
-		});
 		this.app.use(helmet());
 	}
 

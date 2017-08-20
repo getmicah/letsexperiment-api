@@ -25,9 +25,6 @@ class Server {
             res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
             next();
         });
-        this.app.use(function (req, res, next) {
-            console.log(req.ip);
-        });
         this.app.use(helmet());
     }
     routes() {
