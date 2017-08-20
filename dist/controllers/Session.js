@@ -61,7 +61,8 @@ class SessionContoller {
                 'partnerOneIsDone',
                 'partnerTwoIsDone',
                 'partnerOneCurrentGroup',
-                'partnerTwoCurrentGroup'
+                'partnerTwoCurrentGroup',
+                'showTransfer'
             ];
             const session = new Session_1.default(props, required);
             session.validate()

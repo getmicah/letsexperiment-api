@@ -28,6 +28,9 @@ const sessionSchema = {
         partnerTwoCurrentGroup: {
             type: 'number'
         },
+        showTransfer: {
+            type: 'boolean'
+        },
         created_at: {
             type: 'string'
         }

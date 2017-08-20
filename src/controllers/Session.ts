@@ -68,7 +68,8 @@ export default class SessionContoller {
 				'partnerOneIsDone',
 				'partnerTwoIsDone',
 				'partnerOneCurrentGroup',
-				'partnerTwoCurrentGroup'
+				'partnerTwoCurrentGroup',
+				'showTransfer'
 			];
 			const session = new Session(props, required);
 			session.validate()
