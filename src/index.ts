@@ -31,6 +31,7 @@ class Server {
 			res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 			next();		  
 		});
+		/*
 		this.app.use(function(req: Request, res: Response, next: NextFunction) {
 			if (req.ip == '68.113.9.96' || req.ip == '151.101.61.147') {
 				next();				
@@ -39,6 +40,7 @@ class Server {
 				res.status(403).end('forbidden');				
 			}
 		});
+		*/
 		this.app.use(helmet());
 	}
 
