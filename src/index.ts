@@ -26,7 +26,7 @@ class Server {
 		this.app.use(bodyParser.urlencoded({extended: true}));
 		this.app.use(bodyParser.json());
 		this.app.use((req: Request, res: Response, next: NextFunction) => {
-			res.header('Access-Control-Allow-Origin', 'https://letsexperiment.github.io');
+			res.header('Access-Control-Allow-Origin', '*');
 			res.header('Access-Control-Allow-Methods', 'GET,PUT,POST');
 			res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
 			next();		  
