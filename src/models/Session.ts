@@ -15,9 +15,6 @@ const sessionSchema: JsonSchema = {
 		partnerTwoQuestions: {
 			type: 'array'
 		},
-		completedQuestions: {
-			type: 'array'
-		},
 		partnerOneIsDone: {
 			type: 'boolean'
 		},
@@ -32,6 +29,9 @@ const sessionSchema: JsonSchema = {
 		},
 		showTransfer: {
 			type: 'boolean'
+		},
+		matches: {
+			type: 'array'
 		},
 		created_at: {
 			type: 'string'

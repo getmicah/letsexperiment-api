@@ -16,9 +16,6 @@ const sessionSchema = {
         partnerTwoQuestions: {
             type: 'array'
         },
-        completedQuestions: {
-            type: 'array'
-        },
         partnerOneIsDone: {
             type: 'boolean'
         },
@@ -33,6 +30,9 @@ const sessionSchema = {
         },
         showTransfer: {
             type: 'boolean'
+        },
+        matches: {
+            type: 'array'
         },
         created_at: {
             type: 'string'

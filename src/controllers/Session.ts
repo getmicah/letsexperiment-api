@@ -65,7 +65,6 @@ export default class SessionContoller {
 				'partnerTwoNickname',
 				'partnerOneQuestions',
 				'partnerTwoQuestions',
-				'completedQuestions',
 				'partnerOneIsDone',
 				'partnerTwoIsDone',
 				'partnerOneCurrentGroup',
