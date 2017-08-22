@@ -16,6 +16,9 @@ const sessionSchema = {
         partnerTwoQuestions: {
             type: 'array'
         },
+        completedQuestions: {
+            type: 'array'
+        },
         partnerOneIsDone: {
             type: 'boolean'
         },
