@@ -13,9 +13,7 @@ class SessionRouter {
     }
     routes() {
         this.router.route('/')
-            .get(this.rootGet.bind(this))
-            .post(this.rootPost.bind(this))
-            .delete(this.rootDelete.bind(this));
+            .post(this.rootPost.bind(this));
         this.router.route('/:id')
             .get(this.idGet.bind(this))
             .put(this.idPut.bind(this));
@@ -27,11 +25,6 @@ class SessionRouter {
     }
     rootPost(req, res) {
         this.controller.addSession(req.body)
-            .then((r) => this.respond(res, r))
-            .catch((r) => this.respond(res, r));
-    }
-    rootDelete(req, res) {
-        this.controller.deleteAll(req.body.confirm)
             .then((r) => this.respond(res, r))
             .catch((r) => this.respond(res, r));
     }
